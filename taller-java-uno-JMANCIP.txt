@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las variables A, B y C respectivamente.\n El algoritmo debe imprimir cual es el mayor y cual es el menor." +
+                "Recuerde constatar que los tres valores introducidos por el teclado sean valores distintos. \n Presente un mensaje de alerta en caso de que se detecte la introducción de valores iguales.");
+
+        System.out.println("|||----------------------------------------------------------------------------------|||");
+        System.out.println("Ingrese el valor de A");
+        int a = scanner.nextInt();
+        System.out.println("Ingrese el valor de B");
+        int b = scanner.nextInt();
+        System.out.println("Ingrese el valor de C");
+        int c = scanner.nextInt();
+
+        if (a == b && b == c && c == a) {
+            System.out.println("introduzca tres valores distintos ");
+
+        } else if (a > b && a > c) {
+            System.out.println("_______________________________________");
+            System.out.println(a + "  A 'Es el mayor'");
+            if (b > c) {
+                System.out.println(b + "  B 'Es Menor'");
+            } else {
+                System.out.println(c + "  C 'Es Menor'");
+            }
+
+        } else if (b > a && b > c) {
+            System.out.println("_______________________________________");
+            System.out.println(b + " B 'Es el mayor'");
+            if (a > c) {
+                System.out.println(a + " A 'Es Menor'");
+            } else {
+                System.out.println(c + " C 'Es Menor' ");
+            }
+
+        } else {
+            System.out.println("_______________________________________");
+            System.out.println(c + " C 'Es Mayor' ");
+            if (b > a) {
+                System.out.println(b + " B 'Es Menor'");
+            } else {
+                System.out.println(c + " C 'Es Menor'");
+            }
+        }
+    }
+}
